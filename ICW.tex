@@ -1,0 +1,131 @@
+\documentclass[ngerman,openany]{scrreprt}
+\usepackage[latin1]{inputenc}
+
+% ------------------------------ PAKETE ------------------------------  
+\usepackage{units}
+\usepackage{tabularx} % Paket für Tabellen
+\usepackage{verbatim}
+\usepackage{geometry} % Paket für Seitenränder u.ä.
+\usepackage{graphicx} % Paket für Grafiken
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{fancyhdr} % Paket für Kopfzeile
+
+
+% ------------------------------ KOPFZEILE ------------------------------  
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+\fancyhead[R]{\thepage} %Kopfzeile rechts
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+
+% ------------------------------ DECKBLATT ------------------------------  
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\Large{\textbf{Independent Coursework}} \\[8ex]
+\LARGE{\textbf{Trends in Container-Virtulisierung}}\\[3ex]
+\large{\quad} \\ %Schriftgröße fürs Deckblatt definieren (wenn diese Zeile entfernt wird ist alles weitere in LARGE
+\includegraphics[scale=1.5]{HTW_Logo_rgb.jpg} \qquad \qquad \includegraphics[scale=1.0]{logo_desy.jpg} \\[10ex]
+\begin{tabular}{l l l} \\
+bearbeitet von: & \quad Tom Schubert \\[2ex]
+Studiengang: & \quad Angewandte Informatik (Master) \\[2ex]
+Fachbereich: & \quad Wirtschaftswisenschaften II \\[2ex]
+Matrikelnummer: & \quad 535279 \\[2ex]
+zuständiger Prof.: & \quad Prof. Dr. Hermann Heßling \\[2ex]
+zuständige Mitarbeiter (DESY): & \quad Patrick Furhmann \\[2ex]
+& \quad Yves Kemp \\[2ex]
+Datum (Version): & \quad \today \quad (Ver. 0.0)
+\end{tabular}
+\end{center}
+\end{titlepage}
+
+
+% ------------------------------ INHALTSVERZEICHNIS ------------------------------  
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+\pagestyle{fancy} % Für alle folgenden Seiten diesen Stil definieren
+% ------------------------------ LANGTEXT ------------------------------  
+\chapter{Grundlagen}
+In diesem Kapitel werden die Grundlagen rund um das Thema Container erklärt. Hierzu wird darauf eingegangen, weshalb Container verwendet werden und welche Vorteile sie gegenüber anderen Verfahren haben. \\
+Verschiedene Containerarten werden gezeigt und erklärt, in welchen Aspekten diese sich unterscheiden und / oder ähneln.
+
+
+\section{Container}
+
+
+
+\subsection{Anwendungscontainer (kurz APPC)}
+
+\subsection{Systemcontainer (kurz SC)}
+
+\section{Images}
+
+\subsection{App Container Image}
+%ACI defined in https://github.com/appc/spec/blob/master/SPEC.md#app-container-image
+
+\subsection{App Container Pod}
+
+\subsection{Signed Images}
+Image archives SHOULD be signed using PGP, the format MUST be ascii-armored detached signature mode. \\
+Image signatures MUST be named with the suffix .aci.asc
+% https://github.com/appc/spec/blob/master/SPEC.md
+
+\section{Standardisierung}
+gibt es keine. Versuch https://github.com/appc/spec
+
+
+\section{Virtual Machines}
+% im Prinzip genau das https://www.youtube.com/watch?v=_KnmRdK69qM
+Sind zu langsam (Performance-Probleme)
+Virtuelle Maschinen enthalten immer das komplette OS (Overhead)
+
+\subsection{Unterschiede bzw. Vergleichbarkeit}
+
+
+\section{OS-Spezifikationen}
+Die meisten Container beruhen auf LXC (Linux).
+Es gibt auch schon Windows-Container (wie funktionieren diese?)
+
+
+\chapter{Containersoftware}
+https://github.com/appc/spec
+
+\section{LXC}
+Linux-Grundlage für Container-Technologie, alles andere beruht darauf.
+
+\section{LXD (SC)}
+
+\section{Docker (APPC)}
+http://codefest.at/post/2014/11/25/Erste-Schritte-mit-Docker-Teil-1.aspx
+
+\section{Rocket (APPC)}
+
+\section{Jetpack (APPC)}
+
+\section{Libappc (APPC)}
+
+\section{Kurma (APPC)}
+http://www.apcera.com/blog/apcera-open-sources-new-kurma-project/
+
+\chapter{Orchestration}
+
+\section{Boot2Docker}
+
+\section{VMWare}
+
+\section{OpenStack}
+
+\chapter{Performance}
+
+\chapter{Security}
+
+\end{document}
+
+
