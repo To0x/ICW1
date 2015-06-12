@@ -58,12 +58,27 @@ Verschiedene Containerarten werden gezeigt und erklärt, in welchen Aspekten dies
 
 
 \section{Container}
+Container bedienen sich einer gewissen Art der Abstraktion von verschiedenen Ressourcen des Host-Betriebssystems. Dabei werden virtuelle Ressourcen erstellt, mit denen das Gast-System arbeitet. Diese virtuellen Ressourcen sind vom Host-System abgekoppelt und bieten dadurch eine Trennung beider Systeme. Die Ressourcen, die virtualisiert werden sind abhängig von der Art der Container. Im folgenden werden zwei verschiedene Container-Arten vorgestellt.
 
-
-
-\subsection{Anwendungscontainer (kurz APPC)}
 
 \subsection{Systemcontainer (kurz SC)}
+Systemcontainer oder auch virtuelle Maschinen sind eine Art von Containern, die das komplette System virtualisieren und nachbilden. In einer virtuellen Maschine werden alle Hardware-Komponenten nachgestellt und ein eigenes Betriebssystem innerhalb der virtuellen Maschine muss aufgesetzt werden.\\
+\begin{center}
+\includegraphics[scale=0.25]{VM1.jpg} \\
+\end{center}
+Hierbei hat jedes Gast-Betriebssystem (Guest OS) eine komplett eigene Hardware-Struktur, welche von der Virtualisierungssoftware zur Verfügung gestellt wird.
+Der Vorteil einer solchen Architektur ist, dass Software welche im Gast-System (im virtualisierten System) ausgeführt wird, sich wie in einer Sandbox verhält. Die virtuelle Maschine stellt der Software Ressourcen zur Verfügung, die wie gewohnt genutzt werden können - mit dem Unterschied, dass alle installierten Komponenten innerhalb der virtuellen Maschine keinerlei Zugriff auf das Host-Betriebssytem besitzen. \\
+Neben dem Sicherheitsaspekt ist ein weiterer Vorteil die Portabilität - denn virtuelle System sind auf dem Host-Betriebssytem einfache Dateien, welche auf andere Datenträger kopiert / verschoben werden können und auf anderen Rechnern im exakt identischen Zustand wieder gestartet werden können. \\
+
+\subsection{Anwendungscontainer (kurz APPC)}
+Ein Nachteil von Systemcontainern ist die Performance, da eine virtuelle Maschine immer eine komplette Rechnerarchitektur nachbildet und ein voll installiertes Betriebssystem beinhaltet. Um diesen Nachteil entgegenzuwirken werden Anwendungscontainer verwendet, die nicht das komplette System visualisieren, sondern gewisse Komponenten, die an das Host-System gekoppelt sind. \\
+\begin{center}
+\includegraphics[scale=0.25]{Container1.jpg} \\
+\end{center}
+Der Unterschied ...
+
+\newpage
+% TODO
 
 \section{Images}
 
@@ -74,7 +89,7 @@ Verschiedene Containerarten werden gezeigt und erklärt, in welchen Aspekten dies
 
 \subsection{Signed Images}
 Image archives SHOULD be signed using PGP, the format MUST be ascii-armored detached signature mode. \\
-Image signatures MUST be named with the suffix .aci.asc
+Image signatures MUST be named with the suffix .and
 % https://github.com/appc/spec/blob/master/SPEC.md
 
 \section{Standardisierung}
