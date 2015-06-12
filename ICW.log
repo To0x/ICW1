@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.15)  12 JUN 2015 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.15)  12 JUN 2015 17:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -382,107 +382,97 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./HTW_L
-ogo_rgb.jpg> <./logo_desy.jpg>] (./ICW.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 2.
-)
+ogo_rgb.jpg> <./logo_desy.jpg>] (./ICW.toc)
 \tf@toc=\write3
 \openout3 = `ICW.toc'.
 
  [2
 
+
+] (./ICW.lof)
+\tf@lof=\write4
+\openout4 = `ICW.lof'.
+
+ [3
+
 ]
 Chapter 1.
 
-Overfull \hbox (3.83875pt too wide) in paragraph at lines 56--58
+Overfull \hbox (3.83875pt too wide) in paragraph at lines 60--62
 \OT1/cmr/m/n/10.95 Hi-erzu wird da-rauf einge-gan-gen, we-shalb Con-tainer ver-
 wen-det wer-den und welche Vorteile
  []
 
 
-Overfull \hbox (2.59174pt too wide) in paragraph at lines 61--62
+Overfull \hbox (2.59174pt too wide) in paragraph at lines 65--66
 \OT1/cmr/m/n/10.95 Container be-di-enen sich einer gewis-sen Art der Ab-strak-t
 ion von ver-schiede-nen Ressourcen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-<VM1.jpg, id=15, 487.8225pt x 418.56375pt>
+<VM1.jpg, id=17, 487.8225pt x 418.56375pt>
 File: VM1.jpg Graphic file (type jpg)
  <use VM1.jpg>
-Package pdftex.def Info: VM1.jpg used on input line 67.
+Package pdftex.def Info: VM1.jpg used on input line 71.
 (pdftex.def)             Requested size: 121.95532pt x 104.64067pt.
 
-Overfull \hbox (12.08069pt too wide) in paragraph at lines 69--72
+Overfull \hbox (12.08069pt too wide) in paragraph at lines 74--77
 \OT1/cmr/m/n/10.95 Hierbei hat jedes Gast-Betriebssystem (Guest OS) eine kom-pl
 ett eigene Hardware-Struktur,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
  []
 
-[3
+[4
+
 
  <./VM1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<Container1.jpg, id=19, 407.5225pt x 292.09125pt>
+<Container1.jpg, id=22, 404.51125pt x 239.89626pt>
 File: Container1.jpg Graphic file (type jpg)
  <use Container1.jpg>
-Package pdftex.def Info: Container1.jpg used on input line 76.
-(pdftex.def)             Requested size: 101.88037pt x 73.02263pt.
+Package pdftex.def Info: Container1.jpg used on input line 81.
+(pdftex.def)             Requested size: 101.12756pt x 59.9739pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Overfull \hbox (1.19263pt too wide) in paragraph at lines 81--85
+LaTeX Warning: Citation `website:techrep-container' on page 5 undefined on inpu
+t line 87.
+
+
+Overfull \hbox (1.19263pt too wide) in paragraph at lines 87--91
 \OT1/cmr/m/n/10.95 Ein Nachteil von Sys-tem-con-tain-ern ist, dass diese beim B
 ootvor-gang mit fixen Ressourcen
  []
 
-[4 <./Container1.jpg>] [5] [6]
+[5 <./Container1.jpg>] [6] [7]
 Chapter 2.
-[7
-
-]
-Chapter 3.
 [8
 
 ]
-Chapter 4.
+Chapter 3.
 [9
 
 ]
-Chapter 5.
+Chapter 4.
 [10
 
-] (./ICW.aux) ) 
-Here is how much of TeX's memory you used:
- 4054 strings out of 493117
- 62376 string characters out of 6135433
- 178563 words of memory out of 5000000
- 7456 multiletter control sequences out of 15000+600000
- 9984 words of font info for 35 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 47i,11n,51p,580b,207s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssbx10.pfb>
-Output written on ICW.pdf (10 pages, 304878 bytes).
-PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+]
+Chapter 5.
+(./ICW.bbl [11
 
+]
+./ICW.bbl:7: Undefined control se

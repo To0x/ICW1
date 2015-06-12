@@ -45,10 +45,14 @@ Datum (Version): & \quad \today \quad (Ver. 0.0)
 
 
 % ------------------------------ INHALTSVERZEICHNIS ------------------------------  
-\newpage
-\thispagestyle{empty}
-\tableofcontents
-\newpage
+\clearpage% oder \cleardoublepage bei twoside
+\begingroup
+  \renewcommand*{\chapterpagestyle}{empty}
+  \pagestyle{empty}
+  \tableofcontents
+  \listoffigures
+  \clearpage
+\endgroup
 
 \pagestyle{fancy} % Für alle folgenden Seiten diesen Stil definieren
 % ------------------------------ LANGTEXT ------------------------------  
@@ -64,7 +68,8 @@ Container bedienen sich einer gewissen Art der Abstraktion von verschiedenen Res
 \subsection{Systemcontainer (kurz SC)}
 Systemcontainer oder auch virtuelle Maschinen sind eine Art von Containern, die das komplette System virtualisieren. In einer virtuellen Maschine werden alle Hardware-Komponenten nachgestellt und ein eigenes Betriebssystem innerhalb der virtuellen Maschine muss aufgesetzt werden.\\
 \begin{center}
-\includegraphics[scale=0.25]{VM1.jpg} \\
+\includegraphics[scale=0.25]{VM1.jpg}
+\captionof{figure}{Aufbaustruktur von Virtualisierten Maschinen}
 \end{center}
 Hierbei hat jedes Gast-Betriebssystem (Guest OS) eine komplett eigene Hardware-Struktur, welche von der Virtualisierungssoftware zur Verfügung gestellt wird.
 Der Vorteil einer solchen Architektur ist, dass Software welche im Gast-System (im virtualisierten System) ausgeführt wird, sich wie in einer Sandbox isoliert verhält. Die Virtualisierungssoftware stellt dem Gast-System Ressourcen zur Verfügung, die sich wie ein eigenes System verhalten und genutzt werden können. Der Vorteil durch diese Isolierung von Ressourcen ist, dass alle installierten Komponenten innerhalb der virtuellen Maschine keinerlei Zugriff auf das Host-Betriebssytem besitzen und dieses nicht manipulieren können (Schutz vor Schadsoftware). \\
@@ -73,15 +78,17 @@ Neben dem Sicherheitsaspekt ist ein weiterer Vorteil die Portabilität - denn vir
 \subsection{Anwendungscontainer (kurz APPC)}
 Ein Nachteil von Systemcontainern ist die Performance, da eine virtuelle Maschine immer eine komplette Rechnerarchitektur nachbildet und ein voll installiertes Betriebssystem beinhaltet müssen diese auch beim Start komplett geladen und ein Boot-Vorgang durchgeführt werden. Um diesen Nachteil entgegenzuwirken werden Anwendungscontainer verwendet, die nicht das komplette System virtualisieren, sondern gewisse Komponenten, die an das Host-System gekoppelt sind. \\
 \begin{center}
-\includegraphics[scale=0.25]{Container1.jpg} \\
+\includegraphics[scale=0.25]{Container1.jpg}
+\captionof{figure}{Aufbaustruktur von Container im Host-System}
 \end{center}
 Der Unterschied von Anwendungscontainern im Gegensatz zu Systemcontainern ist, dass APPCs den Kernel des Betriebssystems mit verwenden anstatt diesen - wie in der VM - selbst zur Verfügung zu stellen. \\
 
 \subsubsection{Vor- und Nachteile}
-Ein Nachteil von Systemcontainern ist, dass diese beim Bootvorgang mit fixen Ressourcen versehen werden müssen, die von der Virtualisierungssoftware beim Host-System angefragt werden und entsprechend reserviert werden. So wird beim Starten einer virtuellen Maschine genau soviel RAM am Host-System angefragt, wie die virtuelle Maschine selbst zur Verfügung stellen möchte. Für das Host-System ist der angeforderte RAM-Bereich dann komplett alloziert, auch wenn im Gast-System keine Anwendung den Speicher nutzt. \\
+Ein Nachteil von Systemcontainern ist, dass diese beim Bootvorgang mit fixen Ressourcen versehen werden müssen, die von der Virtualisierungssoftware beim Host-System angefragt werden und entsprechend reserviert werden. So wird beim Starten einer virtuellen Maschine genau soviel RAM am Host-System angefragt, wie die virtuelle Maschine selbst zur Verfügung stellen möchte. Für das Host-System ist der angeforderte RAM-Bereich dann komplett alloziert, auch wenn im Gast-System keine Anwendung den Speicher nutzt \cite{website:techrep-container} \\
 Diesem Problem widmen sich Anwendungscontainer indem sie den Kernel des Host-Systems nutzen und eigenständig so viel Speicher allozieren wie sie zum Zeitpunkt der Ausführung benötigen. Auch ist es dem APPC möglich während der Laufzeit den Speicherbereich zu erweitern und nicht benötigten Speicher wieder freizugeben. \\
 Diese Möglichkeit der Variabilität von Anwendungscontainern ist nicht ausschließlich auf den RAM begrenzt - auch können Ressourcen wie Anzahl der Prozessoren, benötigter Festplattenspeicher u. ä. flexibel verwendet werden. \\
 Dadurch ist es möglich in größeren Rechnernetzen Ressourcen variablen zu verschieben und je nach Bedarf dem Nutzer zur Verfügung zu stellen. Nicht verwendete Ressourcen können so an komplexere Programme verteilt werden um das gesamte Rechnernetz zu entlasten.
+
 
 \newpage
 % TODO
@@ -146,6 +153,9 @@ http://www.apcera.com/blog/apcera-open-sources-new-kurma-project/
 \chapter{Performance}
 
 \chapter{Security}
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\bibliographystyle{alpha}
 
 \end{document}
 

@@ -1,0 +1,10 @@
+\begin{thebibliography}{NIS}
+
+\bibitem[NIS]{website:nist-sha}
+NIST.
+\newblock Secure hash standard (shs).
+\newblock
+  \url{http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf}.
+\newblock letzter Zugriff: 04.09.2014.
+
+\end{thebibliography}
